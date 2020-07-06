@@ -1,0 +1,60 @@
+nav
+    display: flex
+    min-width: 1080px
+    max-width: 1280px
+    
+  
+nav .name
+    width: 500px
+    height: 120px   //usunac roznice w header w wysokosci
+    margin-bottom: 20px
+
+
+
+
+nav h1
+    font-size: 40px
+    margin: 20px 20px 5px 20px
+    text-transform: uppercase
+    letter-spacing: 2px
+    
+
+nav h2 
+    font-family: 'Yellowtail', cursive
+    font-size: 26px
+    line-height: 30px
+    letter-spacing: 1px
+    position: relative
+
+nav h2::after,nav h2::before
+    position: absolute
+    top: 15px
+    width: 25%
+    content: ""
+    display: block
+    border-bottom: 2px solid black
+    margin-bottom: 15px
+
+nav h2::after
+    left: 30px
+    
+nav h2::before
+    right: 30px
+   
+nav ul 
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    flex-grow: 1
+    margin-right: 25px
+
+nav ul li 
+    flex-basis: 100px
+    height: 80px         
+    line-height: 80px
+    letter-spacing: 1px
+    text-align: center
+    font-size: 20px
+    display: inline-block
+    list-style: none
+    text-transform: uppercase
