@@ -1,32 +1,43 @@
 header
-    position: relative
-    background-color: yellow
-    height: 100%
-    max-height: calc(100vh - 140px)
+    height: 100vh
+    max-width: 100vw
     overflow: hidden
+    position: relative
     
-
-header img 
-    width: 100vw  
-    max-height: calc(100vh - 140px)
-    animation: increaseImg 5s linear infinite
+header .background
+    background-image: url('../header1.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    height: 100vh
+    max-height: 100vh
+    width: 120vw
+    margin-left: -5%
+    animation: moveImg 10s linear infinite
 
 header .arrow i
     position: absolute
-    bottom: 5%
+    bottom: 8%
     left: 50%
     transform: translate(-50%,-50%)
     font-size: 50px
     border-radius: 50%
     animation: arrow 20s linear infinite
+    transition: 0.4s
+   
+header .arrow i:hover
+    cursor: pointer
+    font-size: 60px
 
-
-@keyframes increaseImg
+@keyframes moveImg
     0% 
-        transform: scale(1)
+        transform: translate(0%, 0%)
+    50%
+        transform: translate(3%, 0%)
+    50.1%
+        transform: translate(0%, 0%)
     100%  
-        transform: scale(1.15)
-        
+        transform: translate(-3%, 0%)
 @keyframes arrow
     0%
         background-color: transparent
@@ -115,4 +126,9 @@ header .arrow i
     100%
         background-color: transparent
         box-shadow: 0 0 0 0 transparent 
-        color: white 
+        color: white
+
+@media (max-width: 850px)
+    header .arrow i
+        display: none
+

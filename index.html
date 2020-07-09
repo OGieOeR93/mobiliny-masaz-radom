@@ -9,33 +9,47 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+  
+
 </head>
 
 <body>
     <div class="wrapper">
         <nav>
             <div class="name">
-                <h1>Mobilny masaż Radom</h1>
-                <h2>Piotr Włodarczyk</h2>
+                <h1 class="">Mobilny masaż Radom</h1>
+                <h2 class="">Piotr Włodarczyk</h2>
             </div>
-            <ul>
-                <li class="about">O mnie</li>
-                <li class="services">Usługi</li>
-                <li class="prices">Cena</li>
-                <li class="contact">Kontakt</li>
-            </ul>
+            <div class="menuDesktop ">
+                <ul>
+                    <li data-key="1" class="about">O mnie</li>
+                    <li data-key="2" class="services">Usługi</li>
+                    <li data-key="3" class="prices">Cena</li>
+                    <li data-key="4" class="contact">Kontakt</li>
+                </ul>
+            </div>
+            <i id="hamburger" class="fas fa-bars menuActive"></i>
+            <i id="cross" class="fas fa-times"></i>
+            <div class="menuMobile">
+                <ul>
+                    <li data-key="1" class="about">O mnie</li>
+                    <li data-key="2" class="services">Usługi</li>
+                    <li data-key="3" class="prices">Cena</li>
+                    <li data-key="4" class="contact">Kontakt</li>
+                </ul>
+            </div>
         </nav>
         <header>
-
-            <img id="bgcImg" src="img/header1.jpg" alt="">
+            <div class="background"></div>  
             <span class="arrow"><i class="fas fa-arrow-circle-down"></i></span>
         </header>
-        <section class="about">
+
+        <section data-key="1" id="page-1" class="about">
             <h2>Mobilny masaż Radom - Piotr Włodarczyk</h2>
         </section>
-        <section class="services"></section>
-        <section class="prices"></section>
-        <section class="contact"></section>
+        <section data-key="2" class="services"></section>
+        <section data-key="3" class="prices"></section>
+        <section data-key="4" class="contact"></section>
         <footer></footer>
 
 

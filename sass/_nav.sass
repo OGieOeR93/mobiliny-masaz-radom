@@ -1,32 +1,55 @@
+////Nav
 nav
     display: flex
-    min-width: 1080px
-    max-width: 1280px
-    
-  
-nav .name
+    position: fixed
+    z-index: 2
+    width: 100vw
+    max-width: 1480px
+    height: 140px
+    transition: .4s
+    color: white   
+nav::after
+    content: ""
+    display: block
+    background-color: rgba(29, 69, 180, 0.6)
+    height: 140px
+    width: 100%
+    position: fixed
+    left: 0
+    top: 0
+nav.active,nav.active::after        
+    height: 80px          
+   
+
+////Name
+.name
+    margin-left: 100px
     width: 500px
-    height: 120px   //usunac roznice w header w wysokosci
     margin-bottom: 20px
-
-
-
-
-nav h1
+    transition: .4s
+    z-index: 2
+    
+.name h1
     font-size: 40px
     margin: 20px 20px 5px 20px
     text-transform: uppercase
-    letter-spacing: 2px
+    letter-spacing: 3px
+    transition: .4s
+.name h1.active
+    font-size: 20px
+    margin: 10px 20px 0px 20px
     
 
-nav h2 
+.name h2 
     font-family: 'Yellowtail', cursive
     font-size: 26px
     line-height: 30px
     letter-spacing: 1px
     position: relative
-
-nav h2::after,nav h2::before
+    transition: .4s
+.name h2.active 
+    font-size: 20px
+.name h2::after,.name h2::before
     position: absolute
     top: 15px
     width: 25%
@@ -34,21 +57,30 @@ nav h2::after,nav h2::before
     display: block
     border-bottom: 2px solid black
     margin-bottom: 15px
-
-nav h2::after
+.name h2::after
     left: 30px
-    
-nav h2::before
+.name h2::before
     right: 30px
-   
-nav ul 
+.name h2.active::after,.name h2.active::before  
+    display: none
+
+
+////menuDesktop
+.menuDesktop
+    display: flex
+    flex-grow: 1
+    margin-right: 25px
+    z-index: 2
+
+.menuDesktop ul 
     display: flex
     justify-content: flex-end
     align-items: center
     flex-grow: 1
-    margin-right: 25px
+    margin-right: 45px
+    z-index: 2
 
-nav ul li 
+.menuDesktop ul li 
     flex-basis: 100px
     height: 80px         
     line-height: 80px
@@ -58,3 +90,152 @@ nav ul li
     display: inline-block
     list-style: none
     text-transform: uppercase
+    transition: 0.2s
+
+.menuDesktop ul li:hover,.menuMobile ul li:hover 
+    cursor: pointer
+    font-weight: 700
+    letter-spacing: 3px
+
+//menuMobile
+.menuMobile, #cross, #hamburger
+    display: none
+    
+
+
+@media ( max-width:1080px)
+ 
+    .menuDesktop
+        display: none
+   
+    .menuMobile
+        display: block
+        position: fixed
+        right: -300px
+        top: 80px
+        height: 100vh
+        z-index: 2
+        background-color: rgba(29, 69, 180, 0.6)
+      
+    .menuMobile.menuActive
+        right: 0
+
+    .menuMobile.active
+        top: 140px
+
+    .menuMobile ul
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        width: 200px
+        
+    .menuMobile ul li 
+        font-size: 22px
+        flex-basis: 100%
+        line-height: 100px
+        letter-spacing: 1px
+        text-align: center
+        display: inline-block
+        list-style: none
+        text-transform: uppercase
+        transition: 0.2s
+
+    nav #hamburger, nav #cross
+        font-size: 40px
+        position: fixed
+        top: 20px
+        right: 80px
+        z-index: 2
+        transition: 0.4s
+        display: none
+    nav #hamburger:hover,nav #cross:hover
+        cursor: pointer
+    nav #hamburger.active, nav #cross.active
+        top: 50px
+   
+    nav #cross:hover
+        animation: rotate linear 1s 
+    @keyframes rotate   
+        0% 
+            transform: rotate(0)
+        50% 
+            transform: rotate(360deg)
+        100% 
+            transform: rotate(0deg)
+
+    nav #hamburger.menuActive,nav #cross.menuActive
+        display: block
+
+
+@media (max-width: 850px)
+    nav,nav.active,nav::after, nav.active::after 
+        height: 80px
+        padding-bottom: 20px
+     
+    .name
+        margin-left: 0px
+        width: calc(100% - 80px)
+        z-index: 2
+      
+    .name h1,.name h1.active
+        font-size: 30px
+        margin: 10px 20px 0px 20px
+
+    .name h2
+        font-size: 20px
+
+    .name h2::after,.name h2::before
+        display: none
+
+    .menuMobile,.menuMobile.active
+        top: 100px
+
+    .menuMobile
+        right: -100vw
+        background-color: transparent
+        transition: .4s      
+
+    .menuMobile ul
+        display: flex
+        flex-direction: row
+        width: 100vw
+        background-color: rgba(29, 69, 180, 0.6)
+        height: 50px
+
+    .menuMobile ul li 
+        font-size: 20px
+        flex-basis: 25%
+        line-height: 40px
+       
+    nav #hamburger, nav #cross, nav #hamburger.active, nav #cross.active
+        font-size: 30px
+        right: 40px
+        top: 30px  
+
+@media (max-width: 550px)
+    .name
+        width: calc(100% - 60px)
+        margin-left: 0
+
+    nav,nav.active,nav::after, nav.active::after 
+        height: 80px
+        padding-bottom: 0px
+
+    .name h1,.name h1.active
+        font-size: 22px
+        margin: 10px auto 0px 
+       
+    .menuMobile,.menuMobile.active
+        top: 80px
+    
+    nav #hamburger, nav #cross,nav #hamburger.active, nav #cross.active
+        right: 30px
+        top: 20px
+
+    .menuMobile ul li 
+        font-size: 18px
+
+@media (max-width: 320px)
+    .name h2, .name h2.active
+        display: none
+
