@@ -83,3 +83,46 @@ const moveToSectionArrow = () => {
   });
 };
 arrowDown.addEventListener("click", moveToSectionArrow);
+
+/////////Section About/////////////////////////
+
+const textAboutMe = document.getElementById("textAboutMe");
+const spanLine = document.getElementById("line");
+const sections = [...document.querySelectorAll("section h2")];
+const describe =
+  "aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum aaaaLorem ipsum ";
+let indexLetter = 0;
+let flag = false;
+let indexOfSection = 0;
+
+
+
+//Underline h2
+const sectionsUnderline = () => {
+  if (indexOfSection < sections.length) {
+    let sectionHeight = sections[indexOfSection].offsetTop;
+    if (actualPostion + 200 >= sectionHeight) {
+      flag = true;
+      if ((flag = true)) {
+        sections[indexOfSection].classList.add("active");
+        indexOfSection++;
+      }
+    }
+  }
+};
+
+window.addEventListener("scroll", sectionsUnderline);
+
+//Add text
+const addText = () => {
+  textAboutMe.textContent += describe[indexLetter];
+  indexLetter++;
+  if (indexLetter == describe.length) clearInterval(addTextInterval);
+};
+const addTextInterval = setInterval(addText, 30);
+
+//SpanLine
+const setSpanLine = () => {
+  spanLine.classList.toggle("active");
+};
+const setSpanLineInteval = setInterval(setSpanLine, 500);

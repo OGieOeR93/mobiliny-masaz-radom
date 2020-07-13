@@ -1,20 +1,152 @@
-section.about
-    background-color: red
-    height: 1500px
-    width: 100%
-    scroll-behavior: smooth
+
+
 section.services
-    background-color: blue
+    background-color: gray
     height: 200px
-    width: 100%
+    width: 90%
 section.prices
     background-color: orange
     height: 500px
-    width: 100%
+    width: 80%
 section.contact
     background-color: pink
     height: 500px
+    width: 60%
+
+
+
+
+
+
+
+
+
+
+section.about
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    
+section.about .articleAbout
+    max-width: 1080px
+    display: flex
     width: 100%
 
+section.about .articleAbout .text 
+    width: 50%
+    margin: 20px
 
- 
+section.about .articleAbout .text h3 
+    font-size: 28px
+    margin: 0 40px 20px
+    
+section.about .articleAbout .text #line
+    opacity: 1
+
+section.about .articleAbout .text #line.active
+    opacity: 0
+    
+
+section.about .articleAbout .image
+    width: 40%
+    max-height: 500px
+    overflow: hidden
+    text-align: center
+    
+
+section.about .articleAbout .image img
+    height: 100%
+    border-radius: 5%
+    transform: scale(1)
+    opacity: 1
+    transition: 1s
+
+.about .articleAbout .image img:hover
+    cursor: pointer
+    transform: scale(1.15)
+    opacity: .7
+
+@media ( max-width:1080px)
+
+    .about h2 
+        font-size: 32px
+    section.about .articleAbout .text h3 
+        font-size: 24px
+        padding: 0 20px
+    section.about .articleAbout .text span
+        font-size: 20px
+
+    section.about .articleAbout .image
+        max-height: 400px
+   
+
+@media (max-width: 768px)
+
+    .about h2
+        font-size: 30px
+        width: 100%
+        padding: 0px 25px
+        margin: 20px 0 20px
+    
+
+    section.about .articleAbout
+        flex-direction: column-reverse
+        align-items: center
+    
+        
+    section.about .articleAbout .image
+        width: 40%
+        max-height: 300px
+        border-radius: 5%
+
+    section.about .articleAbout .image img  
+        width: 100%
+  
+    section.about .articleAbout .text 
+        width: 100%
+        margin: 20px
+        padding: 20px 20px 0 20px
+        min-height: 250px   //uzupelnic
+
+@media (max-width: 667px)    
+    .about h2
+        width: 70%
+    section.about .articleAbout .text
+        min-height: 250px   //uzupelnic
+
+    section.about .articleAbout .text h3     
+        width: 100%
+        margin-left: 0
+
+@media (max-width: 568px)         
+    .about h2
+        font-size: 22px
+        padding: 0 10px
+        width: 100%
+       
+    section.about .articleAbout .image
+        max-height: 250px
+
+    section.about .articleAbout .text
+        padding-top: 0
+        min-height: 200px  //uzupelnic
+
+    section.about .articleAbout .text h3     
+        font-size: 18px
+        margin-bottom: 10px
+
+    section.about .articleAbout .text span
+        font-size: 16px
+        line-height: 26px
+
+@media (max-width: 411px)
+    .about h2
+        width: 80%
+
+    section.about .articleAbout .text
+        min-height: 280px  //uzupelnic
+
+@media (max-width: 360px)
+    .about h2
+        width: 100%   
