@@ -1,0 +1,122 @@
+section.services
+    width: 100%
+    display: flex
+    align-items: center
+    flex-direction: column
+
+section.services h2 
+    width: 250px
+
+section.services #serv
+    width: 100%
+    max-width: 1480px
+    margin-right: 14px
+    display: flex
+    justify-content: space-around
+    
+section.services #serv .service_one
+    background: url('../img/masaz_klasyczny.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+section.services #serv .service_two
+    background: url('../img/masaz_relaksujacy.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+section.services #serv .service_three
+    background: url('../img/masaż_dla_dwojga.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 10% 5% 
+
+section.services #serv div
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    height: 70vh
+    max-height: 800px
+    position: relative
+    transition: .4s
+    cursor: pointer
+    overflow: hidden
+
+section.services #serv div::before
+    display: block
+    content: ""
+    border: 6px solid  rgba(255, 255, 255, 0.8)
+    position: absolute
+    top: calc(5% - 6px)
+    left: calc(5% - 6px)
+    width: 90%
+    height: 90%
+
+section.services #serv div span 
+    position: absolute
+    top: 5%
+    left: 5%
+    background-color: rgba(29, 69, 180, 0.6)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 90%
+    height: 100px
+    transition: .4s
+
+section.services #serv div span h3
+    line-height: 50px
+    font-size: 28px
+    color: white
+    transition: .4s
+
+section.services #serv div p
+    position: absolute
+    top: calc(5% + 100px)
+    left: 5%
+    width: 90%
+    height: calc(90% - 100px)
+    padding: 10px
+    transition: .4s
+    background-color: rgba(29, 69, 180, 0.6)
+    text-align: center
+    color: white
+
+   
+section.services #serv div.service_one p
+    left: -100%
+section.services #serv div.service_one:hover p
+    left: 5%  
+
+section.services #serv div.service_two p
+    top: 100%
+section.services #serv div.service_two:hover p
+    top: calc(5% + 100px) 
+
+section.services #serv div.service_three p
+    left: 100%
+section.services #serv div.service_three:hover p
+    left: 5%  
+    
+section.services #serv div:hover h3   
+    color: rgba(29, 69, 180, 1)
+    
+section.services #serv div:hover span   
+    background-color: rgba(255, 255, 255, 0.8)
+    
+
+@media ( max-width:1080px)
+    section.services #serv
+        flex-wrap: wrap
+        margin-right: 0
+        // margin-left: 14px
+        
+
+    section.services #serv div
+        width: 40%
+
+    // section.services #serv div.service_three 
+    //     width: 80%
+        // flex-grow: 0
+
+
+/*Reponsywność przygotować po tekście

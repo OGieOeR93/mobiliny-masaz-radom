@@ -95,13 +95,11 @@ let indexLetter = 0;
 let flag = false;
 let indexOfSection = 0;
 
-
-
 //Underline h2
 const sectionsUnderline = () => {
   if (indexOfSection < sections.length) {
     let sectionHeight = sections[indexOfSection].offsetTop;
-    if (actualPostion + 200 >= sectionHeight) {
+    if (actualPostion + 400 >= sectionHeight) {
       flag = true;
       if ((flag = true)) {
         sections[indexOfSection].classList.add("active");
@@ -126,3 +124,26 @@ const setSpanLine = () => {
   spanLine.classList.toggle("active");
 };
 const setSpanLineInteval = setInterval(setSpanLine, 500);
+
+///////// Price////////////
+
+//Calculator
+let numberOfMassage = document.getElementById("number");
+let spanNumberOfMassage = document.getElementById("numberChoosen");
+let priceForOneMassage = document.getElementById("priceOne");
+let priceForDoubleMassages = document.getElementById("priceDouble");
+
+const discountOne = [0, 0, 10, 20, 30, 40, 50, 70, 85, 100];
+const discountDouble = [0,20,40,60,100,150,200,260,320,400];
+
+const calculate = () => {
+  let numberValue = numberOfMassage.value;
+  spanNumberOfMassage.textContent = numberValue;
+  priceForOneMassage.textContent =
+    numberValue * 100 - discountOne[numberValue - 1];
+  priceForDoubleMassages.textContent =
+    numberValue * 200 - discountDouble[numberValue - 1];
+
+ 
+};
+numberOfMassage.addEventListener("input", calculate);

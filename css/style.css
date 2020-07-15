@@ -1,9 +1,10 @@
+@charset "UTF-8";
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
   max-width: 1480px;
   height: 140px;
@@ -17,7 +18,7 @@ nav::after {
   display: block;
   background-color: rgba(29, 69, 180, 0.6);
   height: 140px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   left: 0;
   top: 0;
@@ -33,7 +34,7 @@ nav.active, nav.active::after {
   margin-bottom: 20px;
   -webkit-transition: .4s;
   transition: .4s;
-  z-index: 2;
+  z-index: 3;
 }
 
 .name h1 {
@@ -93,7 +94,7 @@ nav.active, nav.active::after {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-right: 25px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menuDesktop ul {
@@ -110,7 +111,7 @@ nav.active, nav.active::after {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-right: 45px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menuDesktop ul li {
@@ -145,10 +146,10 @@ nav.active, nav.active::after {
   .menuMobile {
     display: block;
     position: fixed;
-    right: -300px;
+    right: -100vw;
     top: 80px;
     height: 100vh;
-    z-index: 2;
+    z-index: 3;
     background-color: rgba(29, 69, 180, 0.6);
   }
   .menuMobile.menuActive {
@@ -187,7 +188,7 @@ nav.active, nav.active::after {
     position: fixed;
     top: 20px;
     right: 80px;
-    z-index: 2;
+    z-index: 3;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     display: none;
@@ -243,7 +244,7 @@ nav.active, nav.active::after {
   .name {
     margin-left: 0px;
     width: calc(100% - 80px);
-    z-index: 2;
+    z-index: 3;
   }
   .name h1, .name h1.active {
     font-size: 30px;
@@ -259,7 +260,6 @@ nav.active, nav.active::after {
     top: 100px;
   }
   .menuMobile {
-    right: -100vw;
     background-color: transparent;
     -webkit-transition: .4s;
     transition: .4s;
@@ -304,6 +304,8 @@ nav.active, nav.active::after {
   }
   .menuMobile, .menuMobile.active {
     top: 80px;
+    height: 50px;
+    width: 100vw;
   }
   nav #hamburger, nav #cross, nav #hamburger.active, nav #cross.active {
     right: 30px;
@@ -328,7 +330,7 @@ header {
 }
 
 header .background {
-  background-image: url("../header1.jpg");
+  background-image: url("../img/header1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -679,24 +681,6 @@ header .arrow i:hover {
   }
 }
 
-section.services {
-  background-color: gray;
-  height: 200px;
-  width: 90%;
-}
-
-section.prices {
-  background-color: orange;
-  height: 500px;
-  width: 80%;
-}
-
-section.contact {
-  background-color: pink;
-  height: 500px;
-  width: 60%;
-}
-
 section.about {
   width: 100%;
   display: -webkit-box;
@@ -860,6 +844,396 @@ section.about .articleAbout .image img {
   }
 }
 
+section.services {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.services h2 {
+  width: 250px;
+}
+
+section.services #serv {
+  width: 100%;
+  max-width: 1480px;
+  margin-right: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.services #serv .service_one {
+  background: url("../img/masaz_klasyczny.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.services #serv .service_two {
+  background: url("../img/masaz_relaksujacy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.services #serv .service_three {
+  background: url("../img/masaż_dla_dwojga.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 5%;
+}
+
+section.services #serv div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 70vh;
+  max-height: 800px;
+  position: relative;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+section.services #serv div::before {
+  display: block;
+  content: "";
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: calc(5% - 6px);
+  left: calc(5% - 6px);
+  width: 90%;
+  height: 90%;
+}
+
+section.services #serv div span {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: rgba(29, 69, 180, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  height: 100px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+section.services #serv div span h3 {
+  line-height: 50px;
+  font-size: 28px;
+  color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+section.services #serv div p {
+  position: absolute;
+  top: calc(5% + 100px);
+  left: 5%;
+  width: 90%;
+  height: calc(90% - 100px);
+  padding: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-color: rgba(29, 69, 180, 0.6);
+  text-align: center;
+  color: white;
+}
+
+section.services #serv div.service_one p {
+  left: -100%;
+}
+
+section.services #serv div.service_one:hover p {
+  left: 5%;
+}
+
+section.services #serv div.service_two p {
+  top: 100%;
+}
+
+section.services #serv div.service_two:hover p {
+  top: calc(5% + 100px);
+}
+
+section.services #serv div.service_three p {
+  left: 100%;
+}
+
+section.services #serv div.service_three:hover p {
+  left: 5%;
+}
+
+section.services #serv div:hover h3 {
+  color: #1d45b4;
+}
+
+section.services #serv div:hover span {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1080px) {
+  section.services #serv {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: 0;
+  }
+  section.services #serv div {
+    width: 40%;
+  }
+}
+
+/*Reponsywność przygotować po tekście */
+section.prices {
+  max-width: 1080px;
+}
+
+section.prices h2 {
+  margin: 30px auto;
+  width: 750px;
+}
+
+section.prices #price > p {
+  padding: 0 40px;
+}
+
+section.prices #price .calculator {
+  text-align: center;
+}
+
+section.prices #price .calculator #number {
+  width: 750px;
+  margin: 60px auto;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 20px;
+  background: rgba(29, 69, 180, 0.6);
+  cursor: pointer;
+}
+
+input[type=range]:active::-webkit-slider-runnable-track {
+  background: rgba(29, 69, 180, 0.4);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: gold;
+  margin-top: -10px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+section.prices #price .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  margin-top: 80px;
+  height: 550px;
+  width: 100%;
+}
+
+section.prices #price .features div {
+  position: absolute;
+  width: 35%;
+  -webkit-box-shadow: 0 0 10px 6px rgba(29, 69, 180, 0.6);
+          box-shadow: 0 0 10px 6px rgba(29, 69, 180, 0.6);
+  padding: 10px;
+  text-align: center;
+  height: 450px;
+  border-radius: 5%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-color: #fcf3ec;
+  overflow: hidden;
+}
+
+section.prices #price .features div:hover {
+  -webkit-box-shadow: 0 0 10px 15px rgba(29, 69, 180, 0.7);
+          box-shadow: 0 0 10px 15px rgba(29, 69, 180, 0.7);
+}
+
+section.prices #price .features div.transport {
+  top: 10%;
+  left: 1%;
+}
+
+section.prices #price .features div.transport p {
+  margin-right: 8%;
+}
+
+section.prices #price .features div.experience {
+  top: 0%;
+  left: calc((100% - 35%)/2);
+  z-index: 2;
+}
+
+section.prices #price .features div.availability {
+  top: 10%;
+  right: 1%;
+}
+
+section.prices #price .features div.availability p {
+  margin-left: 8%;
+}
+
+section.prices #price .features div i {
+  margin: 10px 0 20px;
+  font-size: 80px;
+  color: rgba(29, 69, 180, 0.8);
+  border: 10px solid rgba(29, 69, 180, 0.4);
+  border-radius: 50%;
+  padding: 30px;
+}
+
+section.prices #price .features div h3 {
+  font-size: 24px;
+}
+
+section.prices #price .features div p {
+  margin-top: 30px;
+}
+
+@media (max-width: 1080px) {
+  section.prices #price .calculator #number {
+    width: 70%;
+    margin: 60px auto;
+  }
+  section.prices #price .features {
+    height: 100%;
+    position: static;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+  section.prices #price .features div {
+    position: static;
+    height: 250px;
+    width: 250px;
+    padding: 0;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+  section.prices #price .features div:hover {
+    height: 100%;
+    width: 35%;
+  }
+  section.prices #price .features div p {
+    padding: 0 10px;
+  }
+  section.prices #price .features div.transport p, section.prices #price .features div.availability p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  section.prices #price > p {
+    font-size: 20px;
+  }
+  section.prices #price .features {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.prices #price .features div {
+    height: 240px;
+    width: 50%;
+    margin: 10px;
+  }
+  section.prices #price .features div:hover {
+    height: 100%;
+    width: 50.1%;
+  }
+  section.prices #price .features div p {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.prices h2 {
+    margin: 30px auto;
+    width: 80%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 568px) {
+  section.prices h2 {
+    margin: 15px auto;
+    width: 80%;
+    font-size: 22px;
+  }
+  section.prices #price > p {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+  section.prices #price .calculator #number {
+    width: 80%;
+    margin: 40px auto;
+  }
+  section.prices #price .features div, section.prices #price .features div:hover {
+    height: 100%;
+    width: 90%;
+    margin: 10px;
+  }
+  section.prices #price .features div i {
+    margin: 10px 0 20px;
+    font-size: 50px;
+    border: 5px solid rgba(29, 69, 180, 0.4);
+    padding: 20px;
+  }
+  section.prices #price .features div h3 {
+    font-size: 18px;
+  }
+  section.prices #price .features div p {
+    font-size: 16px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -873,6 +1247,7 @@ body {
   overflow-x: hidden;
   height: 8000px;
   scroll-behavior: smooth;
+  background: #fcf3ec;
 }
 
 .wrapper {
@@ -887,10 +1262,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  overflow: hidden;
 }
 
 .articles {
-  max-width: 1480px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,0 +1,21 @@
+@media (max-width: 850px)
+nav
+h1 30px
+h2 20px
+@media (max-width: 1080px)
+header
+h2 32px
+h3 24px
+p  20px
+@media (max-width: 768px)
+h2 30px
+
+@media (max-width: 568px)
+h2 22px
+h3 18px
+p  16px
+
+@media (max-width: 550px)
+nav
+
+h1 22px

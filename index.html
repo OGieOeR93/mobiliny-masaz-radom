@@ -1,84 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mobilny masaż Radom</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Yellowtail&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <nav>
-            <div class="name">
-                <h1 class="">Mobilny masaż Radom</h1>
-                <h2 class="">Piotr Włodarczyk</h2>
+      <nav>
+        <div class="name">
+          <h1 class="">Mobilny masaż Radom</h1>
+          <h2 class="">Piotr Włodarczyk</h2>
+        </div>
+        <div class="menuDesktop">
+          <ul>
+            <li data-key="1" class="about">O mnie</li>
+            <li data-key="2" class="services">Usługi</li>
+            <li data-key="3" class="prices">Cena</li>
+            <li data-key="4" class="contact">Kontakt</li>
+          </ul>
+        </div>
+        <i id="hamburger" class="fas fa-bars menuActive"></i>
+        <i id="cross" class="fas fa-times"></i>
+        <div class="menuMobile">
+          <ul>
+            <li data-key="1" class="about">O mnie</li>
+            <li data-key="2" class="services">Usługi</li>
+            <li data-key="3" class="prices">Cena</li>
+            <li data-key="4" class="contact">Kontakt</li>
+          </ul>
+        </div>
+      </nav>
+      <header>
+        <div class="background"></div>
+        <span class="arrow"><i class="fas fa-arrow-circle-down"></i></span>
+      </header>
+      <section class="articles">
+        <section data-key="1" class="about">
+          <h2>Mobilny masaż Radom - Piotr Włodarczyk</h2>
+          <div class="articleAbout">
+            <div class="text">
+              <h3>Piotr Włodarczyk - Masażysta Radom</h3>
+              <span id="textAboutMe">1111</span><span id="line">|</span>
             </div>
-            <div class="menuDesktop ">
-                <ul>
-                    <li data-key="1" class="about">O mnie</li>
-                    <li data-key="2" class="services">Usługi</li>
-                    <li data-key="3" class="prices">Cena</li>
-                    <li data-key="4" class="contact">Kontakt</li>
-                </ul>
+            <div class="image">
+              <img src="img/piotr.jpg" alt="" />
             </div>
-            <i id="hamburger" class="fas fa-bars menuActive"></i>
-            <i id="cross" class="fas fa-times"></i>
-            <div class="menuMobile">
-                <ul>
-                    <li data-key="1" class="about">O mnie</li>
-                    <li data-key="2" class="services">Usługi</li>
-                    <li data-key="3" class="prices">Cena</li>
-                    <li data-key="4" class="contact">Kontakt</li>
-                </ul>
-            </div>
-        </nav>
-        <header>
-            <div class="background"></div>
-            <span class="arrow"><i class="fas fa-arrow-circle-down"></i></span>
-        </header>
-        <section class="articles">
-            <section data-key="1" class="about">
-                <h2>Mobilny masaż Radom - Piotr Włodarczyk</h2>
-                <div class="articleAbout">
-                    <div class="text">
-                        <h3> Piotr Włodarczyk - Masażysta Radom</h3>
-                        <span id="textAboutMe">1111</span><span id="line">|</span>
-                    </div>
-
-                    <div class="image">
-                        <img src="img/piotr.jpg" alt="">
-                    </div>
-
-                </div>
-
-            </section>
-            <section data-key="2" class="services">
-                <h2>aaaaaaaaaaaaaaaaaaa</h2>
-            </section>
-            <section data-key="3" class="prices">
-                <h2>bbbbbbbbbbbbbbb</h2>
-            </section>
-            <section data-key="4" class="contact">
-                <h2>ccccccccccccccc</h2>
-            </section>
+          </div>
         </section>
-        <footer></footer>
-
-
-
-
-
+        <section data-key="2" class="services">
+          <h2>Usługi</h2>
+          <div id="serv">
+            <div class="service_one">
+              <span>
+                <h3>Masaż kalsyczyny</h3>
+              </span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit nisi laborum eum eligendi tenetur quod harum facilis
+                accusantium velit necessitatibus culpa in, reprehenderit,
+                debitis beatae, perferendis optio architecto ducimus
+                perspiciatis.
+              </p>
+            </div>
+            <div class="service_two">
+              <span>
+                <h3>Masaż relaksujący</h3>
+              </span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorem unde molestiae, laudantium rem enim error eum, aperiam
+                beatae officiis sunt cupiditate laborum harum labore at expedita
+                nam praesentium iusto a.
+              </p>
+            </div>
+            <div class="service_three">
+              <span>
+                <h3>Masaż dla dwojga</h3>
+              </span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                eveniet nulla minus odio nobis ipsam deserunt similique ad et?
+                Sequi ipsa exercitationem rerum sed illum quod molestias sint
+                distinctio nemo.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section data-key="3" class="prices">
+          <h2>Cena Masażu mobilnego w Radomiu</h2>
+          <div id="price">
+            <p>
+              Skorzystaj z pakietów i płać mniej! Cena za
+              <strong>masaż mobilny na terenie Radomia</strong> jest zależna od
+              liczby wykupionych masażów, oraz rodzaju masażu. Wybierz swój
+              pakiet i umów termin masażu.
+            </p>
+            <div class="calculator">
+              <input
+                type="range"
+                min="1"
+                max="10"
+                value="5"
+                step="1"
+                id="number"
+              />
+              <div class="button">
+                <div class="score">
+                  <p>Liczba zabiegów</p>
+                  <span id="numberChoosen">5</span>
+                  <p>
+                    <strong
+                      >Cena pakietu masażu klasycznego i relakacyjnyego</strong
+                    >
+                  </p>
+                  <span id="priceOne">470</span>
+                  <p><strong>Cena pakietu masażu dla dwojga</strong></p>
+                  <span id="priceDouble">900</span>
+                </div>
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+              </div>
+            </div>
+            <div class="features">
+              <div class="transport">
+                <i class="fas fa-car-side"></i>
+                <h3>Darmowy Dojazd</h3>
+                <p>
+                  Lorem ipsum dolor sit amettttttttt, consectetur adipisicing
+                  elit. Blanditiis, mollitia explicabo! Perspiciatis!!!
+                </p>
+              </div>
+              <div class="experience">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Doświadzenie</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis, mollitia explicabo! Perspiciatis
+                </p>
+              </div>
+              <div class="availability">
+                <i class="far fa-calendar-alt"></i>
+                <h3>Dyspozycyjność</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Blanditiis, mollitia explicabo! Perspiciatis
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-key="4" class="contact">
+          <h2>ccccccccccccccc</h2>
+        </section>
+      </section>
+      <footer></footer>
     </div>
 
-
-
     <script src="js.js"></script>
-</body>
-
+  </body>
 </html>

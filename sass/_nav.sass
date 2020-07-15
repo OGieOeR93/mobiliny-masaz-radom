@@ -2,18 +2,19 @@
 nav
     display: flex
     position: fixed
-    z-index: 2
+    z-index: 3
     width: 100vw
     max-width: 1480px
     height: 140px
     transition: .4s
-    color: white   
+    color: white 
 nav::after
     content: ""
     display: block
     background-color: rgba(29, 69, 180, 0.6)
     height: 140px
-    width: 100%
+    // width: 100%
+    width: 100vw
     position: fixed
     left: 0
     top: 0
@@ -27,7 +28,7 @@ nav.active,nav.active::after
     width: 500px
     margin-bottom: 20px
     transition: .4s
-    z-index: 2
+    z-index: 3
     
 .name h1
     font-size: 40px
@@ -69,7 +70,7 @@ nav.active,nav.active::after
     display: flex
     flex-grow: 1
     margin-right: 25px
-    z-index: 2
+    z-index: 3
 
 .menuDesktop ul 
     display: flex
@@ -77,7 +78,7 @@ nav.active,nav.active::after
     align-items: center
     flex-grow: 1
     margin-right: 45px
-    z-index: 2
+    z-index: 3
 
 .menuDesktop ul li 
     flex-basis: 100px
@@ -110,10 +111,10 @@ nav.active,nav.active::after
     .menuMobile
         display: block
         position: fixed
-        right: -300px
+        right: -100vw
         top: 80px
         height: 100vh
-        z-index: 2
+        z-index: 3
         background-color: rgba(29, 69, 180, 0.6)
       
     .menuMobile.menuActive
@@ -144,7 +145,7 @@ nav.active,nav.active::after
         position: fixed
         top: 20px
         right: 80px
-        z-index: 2
+        z-index: 3
         transition: 0.4s
         display: none
     nav #hamburger:hover,nav #cross:hover
@@ -174,7 +175,7 @@ nav.active,nav.active::after
     .name
         margin-left: 0px
         width: calc(100% - 80px)
-        z-index: 2
+        z-index: 3
       
     .name h1,.name h1.active
         font-size: 30px
@@ -190,7 +191,7 @@ nav.active,nav.active::after
         top: 100px
 
     .menuMobile
-        right: -100vw
+        // right: -100vw
         background-color: transparent
         transition: .4s      
 
@@ -223,9 +224,11 @@ nav.active,nav.active::after
     .name h1,.name h1.active
         font-size: 22px
         margin: 10px auto 0px 
-       
+
     .menuMobile,.menuMobile.active
         top: 80px
+        height: 50px
+        width: 100vw
     
     nav #hamburger, nav #cross,nav #hamburger.active, nav #cross.active
         right: 30px

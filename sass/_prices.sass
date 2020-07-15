@@ -1,0 +1,196 @@
+section.prices 
+    max-width: 1080px
+    
+    
+section.prices h2 
+    margin: 30px auto
+    width: 750px
+
+section.prices #price > p 
+    padding: 0 40px
+
+
+//calculator
+section.prices #price .calculator
+    text-align: center
+
+section.prices #price .calculator #number
+    width: 750px
+    margin: 60px auto
+
+input[type=range]:focus 
+    outline: none
+
+input[type=range]::-webkit-slider-runnable-track 
+    width: 100%
+    height: 20px
+    background: rgba(29, 69, 180, 0.6)
+    
+    cursor: pointer
+
+input[type=range]:active::-webkit-slider-runnable-track 
+    background: rgba(29, 69, 180, 0.4)
+
+
+input[type=range]::-webkit-slider-thumb 
+    -webkit-appearance: none
+    border: none
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    background: gold
+    margin-top: -10px
+
+
+input[type=range]
+    -webkit-appearance: none
+
+
+
+    //features
+section.prices #price .features
+    display: flex
+    flex-direction: row
+    position: relative
+    margin-top: 80px
+    height: 550px
+    width: 100%
+    
+    
+
+section.prices #price .features div
+    position: absolute
+    width: 35%
+    box-shadow: 0 0 10px 6px rgba(29, 69, 180, 0.6)
+    padding: 10px
+    text-align: center
+    height: 450px
+    border-radius: 5%
+    transition: .4s
+    background-color: #fcf3ec
+    overflow: hidden
+
+section.prices #price .features div:hover
+    box-shadow: 0 0 10px 15px rgba(29, 69, 180, 0.7)
+    
+
+section.prices #price .features div.transport
+    top: 10%
+    left: 1%
+section.prices #price .features div.transport p
+    margin-right: 8%
+section.prices #price .features div.experience
+    top: 0%
+    left: calc((100% - 35%)/2)
+    z-index: 2
+    
+section.prices #price .features div.availability
+    top: 10%
+    right: 1%
+section.prices #price .features div.availability p
+    margin-left: 8%
+
+
+section.prices #price .features div i 
+    margin: 10px 0 20px
+    font-size: 80px
+    color: rgba(29, 69, 180, 0.8)
+    border: 10px solid rgba(29, 69, 180, 0.4)
+    border-radius: 50%
+    padding: 30px
+
+section.prices #price .features div h3 
+    font-size: 24px
+    
+section.prices #price .features div p 
+    margin-top: 30px 
+
+
+@media ( max-width:1080px)
+
+    section.prices #price .calculator #number
+        width: 70%
+        margin: 60px auto
+
+    section.prices #price .features
+        height: 100%
+        position: static
+        justify-content: space-around
+        padding-right: 10px
+        margin-bottom: 20px
+
+    section.prices #price .features div
+        position: static
+        height: 250px
+        width: 250px
+        padding: 0
+        padding-bottom: 10px
+        cursor: pointer
+    section.prices #price .features div:hover
+        height: 100%
+        width: 35%
+
+    section.prices #price .features div p 
+        padding: 0 10px
+       
+
+    section.prices #price .features div.transport p,section.prices #price .features div.availability p
+        margin-right: 0
+        margin-left: 0
+    
+
+@media (max-width: 850px)
+    section.prices #price > p 
+        font-size: 20px
+
+    section.prices #price .features
+        flex-wrap: wrap
+        
+        
+    section.prices #price .features div
+        height: 240px
+        width: 50%
+        margin: 10px
+
+    section.prices #price .features div:hover
+        height: 100%
+        width: 50.1%
+        
+    section.prices #price .features div p 
+        margin-top: 10px
+
+
+@media (max-width: 768px)
+    section.prices h2 
+        margin: 30px auto
+        width: 80%
+        font-size: 30px
+
+
+@media (max-width: 568px)
+    section.prices h2 
+        margin: 15px auto
+        width: 80%
+        font-size: 22px
+
+    section.prices #price > p 
+        padding: 0 10px
+        font-size: 16px
+
+    section.prices #price .calculator #number
+        width: 80%
+        margin: 40px auto
+
+    section.prices #price .features div, section.prices #price .features div:hover
+        height: 100%
+        width: 90%
+        margin: 10px
+    section.prices #price .features div i 
+        margin: 10px 0 20px
+        font-size: 50px
+        border: 5px solid rgba(29, 69, 180, 0.4)
+        padding: 20px
+    section.prices #price .features div h3 
+        font-size: 18px
+    section.prices #price .features div  p 
+        font-size: 16px
