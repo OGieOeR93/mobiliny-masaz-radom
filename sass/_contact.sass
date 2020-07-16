@@ -1,0 +1,174 @@
+section.contact
+    height: 420px
+    width: 100%
+    max-width: 1080px
+
+section.contact h2 
+    width: 200px
+    margin: 20px auto 30px
+
+section.contact #cont
+    max-width: 100vw
+    width: 100%
+    padding: 0 50px 
+    transition: 5s
+    position: relative
+    margin: 0 auto
+    
+    
+
+section.contact #cont .contain
+    position: absolute
+    top: 0
+    margin-top: 50px
+    width: 300px
+    height: 200px
+    color: white
+    cursor: pointer
+    transition: 1s
+
+section.contact #cont #contain1
+    left: 5%  
+section.contact #cont #contain2
+    right: 5%  
+
+section.contact #cont #contain1.active
+    left: calc(25% - 70px)
+section.contact #cont #contain2.active
+    right: calc(25% - 70px)
+
+section.contact #cont .contain .box
+    position: absolute
+    bottom: 0
+    left: 0
+    height: 200px
+    width: 300px
+    background-color: rgba(29, 69, 180, 1)
+    border-radius: 10px 10px 0 0
+    transition: .4s
+    z-index: 1
+    
+
+section.contact #cont .contain .box:hover
+    bottom: 50px  
+
+section.contact #cont .contain .box i 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    font-size: 70px
+    
+section.contact #cont .contain p 
+    position: absolute
+    color: white
+    bottom: 0%
+    left: 0%
+    width: 300px
+    line-height: 50px
+    height: 50px
+    text-align: center
+    background-color: rgba(29, 69, 180, 0.6)
+
+section.contact .arrowUp
+    position: fixed
+    color: rgba(29, 69, 180, 0.6)
+    bottom: 50px
+    right: 50px
+    font-size: 40px
+    cursor: pointer
+    display: none
+    transition: .4s
+    
+section.contact .arrowUp.active
+    display: block
+
+    
+    
+    
+
+
+@media ( max-width:1080px)
+    section.contact #cont #contain1.active,
+        left: 10%
+    section.contact #cont #contain2.active
+        right: 10%
+
+    section.contact .arrowUp
+        right: 30px
+
+@media (max-width: 850px)
+
+    section.contact #cont .contain,
+    section.contact #cont .contain .box,
+    section.contact #cont .contain p,
+        width: 250px
+    section.contact #cont #contain1.active,
+        left: 15%
+    section.contact #cont #contain2.active
+        right: 15%
+
+@media (max-width: 768px)
+    section.contact,
+    section.contact #cont
+        height: 680px
+    section.contact h2 
+        font-size: 30px
+    section.contact #cont .contain p 
+        font-size: 18px
+    section.contact #cont .contain,
+    section.contact #cont .contain .box,
+    section.contact #cont .contain p,
+        width: 300px
+
+    section.contact #cont #contain1
+        top: 0%
+        left: 5%  
+        transform: translate(-50%, 0)
+    section.contact #cont #contain2
+        top: 280px
+        right: 5%  
+        transform: translate(50%, 0)
+
+    section.contact #cont #contain1.active
+        left: 50%  
+    section.contact #cont #contain2.active
+        right: 50%  
+
+@media (max-width: 568px)
+    section.contact 
+        height: 740px
+
+    section.contact h2 
+        font-size: 22px
+
+    section.contact #cont .contain
+        width: 100%
+        cursor: auto
+
+    section.contact #cont .contain .box,
+    section.contact #cont .contain p,
+        width: 80%
+        font-size: 16px
+
+    section.contact #cont #contain1,
+    section.contact #cont #contain1.active
+        top: 0%
+        left: 10%  
+        transform: translate(0, 0)
+    section.contact #cont #contain2,
+    section.contact #cont #contain2.active
+        top: 280px
+        left: 10%
+        transform: translate(0, 0)
+
+    section.contact #cont .contain .box
+        top: -50px
+
+    section.contact .arrowUp
+        right: 20px
+        font-size: 50px
+        color: black
+        z-index: 2
+
+    

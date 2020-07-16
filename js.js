@@ -48,6 +48,17 @@ const changeSizeNav = () => {
   }
 };
 window.addEventListener("scroll", changeSizeNav);
+
+//Hidden menuMobile
+const navLi = [...document.querySelectorAll(".menuMobile ul li")];
+navLi.forEach((li) => {
+  li.addEventListener("click", () => {
+    hamburger.classList.toggle("menuActive");
+    cross.classList.toggle("menuActive");
+    menuMobile.classList.toggle("menuActive");
+  });
+});
+
 //Hidden menu
 const showMenu = () => {
   hamburger.classList.toggle("menuActive");
@@ -134,7 +145,7 @@ let priceForOneMassage = document.getElementById("priceOne");
 let priceForDoubleMassages = document.getElementById("priceDouble");
 
 const discountOne = [0, 0, 10, 20, 30, 40, 50, 70, 85, 100];
-const discountDouble = [0,20,40,60,100,150,200,260,320,400];
+const discountDouble = [0, 20, 40, 60, 100, 150, 200, 260, 320, 400];
 
 const calculate = () => {
   let numberValue = numberOfMassage.value;
@@ -143,7 +154,43 @@ const calculate = () => {
     numberValue * 100 - discountOne[numberValue - 1];
   priceForDoubleMassages.textContent =
     numberValue * 200 - discountDouble[numberValue - 1];
-
- 
 };
 numberOfMassage.addEventListener("input", calculate);
+
+///////// Contact////////////
+const divContact = document.querySelector("section.contact");
+const cont1 = document.getElementById("contain1");
+const cont2 = document.getElementById("contain2");
+const arrowUp = document.querySelector("section.contact .arrowUp");
+let flagArrow = true;
+const contact = () => {
+  if (actualPostion >= divContact.offsetTop - divContact.offsetHeight) {
+    cont1.classList.add("active");
+    cont2.classList.add("active");
+  }
+  if (
+    actualPostion >= divContact.offsetTop - divContact.offsetHeight &&
+    flagArrow == true
+  ) {
+    arrowUp.classList.add("active");
+    flagArrow = false;
+  }
+  if (actualPostion <= divContact.offsetTop - 600) {
+    arrowUp.classList.remove("active");
+    flagArrow = true;
+  }
+};
+window.addEventListener("scroll", contact);
+
+const goUp = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  arrowUp.classList.remove("active");
+
+  setTimeout(() => {
+    flagArrow = true;
+  }, 1000);
+};
+arrowUp.addEventListener("click", goUp);
